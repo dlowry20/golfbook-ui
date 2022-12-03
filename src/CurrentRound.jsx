@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CurrentRoundHole from "./CurrentRoundHole"
+import { Outlet } from "react-router-dom"
 
 function CurrentRound() {
 
@@ -24,12 +25,13 @@ function CurrentRound() {
     if (error) return <p>An error occurred</p>
 
     return (
+        <>
         <table>
             <thead>
             <tr>
                 <th>holeNumber</th>
-                <th>score</th>
                 <th>par</th>
+                <th>score</th>
                 <th>gir</th>
                 <th>fairway</th>
                 <th>putts</th>
@@ -50,6 +52,10 @@ function CurrentRound() {
             }
             </tbody>
         </table>
+            <div id="detail">
+                <Outlet />
+            </div>
+        </>
     );
 
 }
