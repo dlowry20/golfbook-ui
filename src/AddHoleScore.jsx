@@ -11,12 +11,11 @@ function AddHoleScore() {
     const [putts, setPutts] = useState(0);
     const [gir, setGir] = useState(false);
     const [fairway, setFairway] = useState(false);
-
+    const token = localStorage.getItem("accessToken")
     useEffect(() => {
         axios.get("http://localhost:8080/hole_score/current_round", {}, {
-            auth: {
-                username: "user1",
-                password: "password"
+            headers: {
+                'Authorization': `Bearer ${token}`
             }
         })
             .then((response) => {
@@ -27,12 +26,7 @@ function AddHoleScore() {
 
     function handleSubmit() {
 
-        var myHeaders = new Headers();
-        myHeaders.append("Authorization", "Basic dXNlcjE6cGFzc3dvcmQ=");
-        myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("Cookie", "SESSION=N2U5M2Q1MDgtMzQ0OS00NDAxLTk4ZDEtZmM3ZDZmNjNkZGEz; XSRF-TOKEN=aea13f6f-ae04-41e8-97b4-a58514f396cc");
-
-        var raw = JSON.stringify({
+        var raw = {
             "courseId": 1,
             "holeNumber": holeNumber,
             "score": score,
@@ -40,19 +34,13 @@ function AddHoleScore() {
             "gir": false,
             "fairway": false,
             "putts": putts
-        });
-
-        var requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: raw,
-            redirect: 'follow'
         };
 
-        fetch("http://localhost:8080/hole_score/", requestOptions)
-            .then(response => response.text())
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
+        axios.post("http://localhost:8080/hole_score/", raw, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
 
     }
 

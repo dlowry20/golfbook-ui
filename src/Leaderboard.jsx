@@ -7,9 +7,15 @@ function Leaderboard() {
     const [error, setError] = useState(null);
 
     const [scores, setScores] = useState([]);
-
+    const token = localStorage.getItem("accessToken")
+    console.log(token);
     useEffect(() => {
-        axios("http://localhost:8080/current_round/list_by_tournament_id/1")
+        axios('http://localhost:8080/current_round/list_by_tournament_id/1',
+            {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+            })
             .then((response) => {
                 setScores(response.data);
                 setError(null);

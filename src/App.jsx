@@ -10,7 +10,7 @@ function App() {
             <h1>Application</h1>
             <BrowserRouter>
                 <Routes>
-                    <Route exact path="/login">
+                    <Route exact path="/">
                         <Login />
                     </Route>
                     {/*<Route path="/dashboard">*/}

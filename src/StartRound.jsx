@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
-function StartRound() {
+export default function StartRound() {
 
     var todaysDate = new Date();
+    const token = localStorage.getItem("accessToken")
     var todaysDateString = todaysDate.toISOString().substr(0, 10);
     const [golfCourse, setCourseName] = useState("River Oaks Golf Course")
     const [datePlayed, setDatePlayed] = useState(todaysDateString)
@@ -14,14 +15,17 @@ function StartRound() {
         backNine: 0,
         totalScore: 0
     })
-    function handleSubmit() {
+    const handleSubmit = async e => {
+        e.preventDefault()
 
+        const token = localStorage.getItem("accessToken")
         var myHeaders = new Headers();
-        myHeaders.append("Authorization", "Basic dXNlcjE6cGFzc3dvcmQ=");
+
+        myHeaders.append('Authorization', `Bearer ${token}`);
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append("Cookie", "SESSION=N2U5M2Q1MDgtMzQ0OS00NDAxLTk4ZDEtZmM3ZDZmNjNkZGEz; XSRF-TOKEN=aea13f6f-ae04-41e8-97b4-a58514f396cc");
 
-        var raw = JSON.stringify({
+        var raw = {
             "courseId": 1,
             "courseName": golfCourse,
             "datePlayed": datePlayed,
@@ -29,7 +33,7 @@ function StartRound() {
             "coursePar": 71,
             "userId": "user1",
             "tournamentId": 1
-        });
+        }
 
         var requestOptions = {
             method: 'POST',
@@ -38,10 +42,16 @@ function StartRound() {
             redirect: 'follow'
         };
 
-        fetch("http://localhost:8080/round_score/", requestOptions)
-            .then(response => response.text())
-            .then(result => console.log(result))
-            .catch(error => console.log('error', error));
+        axios.post("http://localhost:8080/round_score/", raw, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+
+        // fetch("http://localhost:8080/round_score/", requestOptions)
+        //     .then(response => response.text())
+        //     .then(result => console.log(result))
+        //     .catch(error => console.log('error', error));
 
     }
 
@@ -104,7 +114,3 @@ function handleChange(event) {
         [event.target.name]: value
     });
 }
-
-
-
-export default StartRound;

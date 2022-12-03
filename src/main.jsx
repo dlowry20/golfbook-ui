@@ -12,18 +12,19 @@ import AddHoleScore from "./AddHoleScore";
 
 import Leaderboard from "./Leaderboard";
 import ErrorPage from "./ErrorPage";
+import Login from "./containers/Login";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <CurrentRound/>,
+        element: <Login/>,
         errorElement: <ErrorPage />,
-        children: [
-            {
-                path: "leaderboard",
-                element: <Leaderboard />,
-            },
-        ],
+        // children: [
+        //     {
+        //         path: "leaderboard",
+        //         element: <Leaderboard />,
+        //     },
+        // ],
     },
     {
         path: "/leaderboard",
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
     {
         path: "/startRound",
         element: <StartRound />,
+    },
+    {
+        path: "/currentRound",
+        element: <CurrentRound />,
     },
     {
         path: "/addHoleScore",

@@ -1,79 +1,48 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import Form from "react-bootstrap/Form";
+import axios from 'axios';
 
-import Button from "react-bootstrap/Button";
 
-import "./Login.css";
+async function loginUser(credentials) {
+
+    const response = await axios.post("http://localhost:8080/authenticate", credentials)
+        .catch(error => console.log('error', error));
+    return response.data
+
+}
 
 export default function Login() {
 
-    const [email, setEmail] = useState("");
+    const [username, setUserName] = useState();
 
-    const [password, setPassword] = useState("");
+    const [password, setPassword] = useState();
 
-    function validateForm() {
+    const handleSubmit = async e => {
 
-        return email.length > 0 && password.length > 0;
-
+        e.preventDefault();
+        const tokenResponse = await loginUser({
+            username,
+            password
+        });
+        localStorage.setItem("accessToken", tokenResponse.token)
     }
 
-    function handleSubmit(event) {
-
-        event.preventDefault();
-
-    }
-
-    return (
-
-        <div className="Login">
-
-            <Form onSubmit={handleSubmit}>
-
-                <Form.Group size="lg" controlId="email">
-
-                    <Form.Label>Email</Form.Label>
-
-                    <Form.Control
-
-                        autoFocus
-
-                        type="email"
-
-                        value={email}
-
-                        onChange={(e) => setEmail(e.target.value)}
-
-                    />
-
-                </Form.Group>
-
-                <Form.Group size="lg" controlId="password">
-
-                    <Form.Label>Password</Form.Label>
-
-                    <Form.Control
-
-                        type="password"
-
-                        value={password}
-
-                        onChange={(e) => setPassword(e.target.value)}
-
-                    />
-
-                </Form.Group>
-
-                <Button block size="lg" type="submit" disabled={!validateForm()}>
-
-                    Login
-
-                </Button>
-
-            </Form>
-
+    return(
+        <div className="login-wrapper">
+            <h1>Please Log In</h1>
+            <form onSubmit={handleSubmit}>
+                <label>
+                    <p>Username</p>
+                    <input type="text" onChange={e => setUserName(e.target.value)} />
+                </label>
+                <label>
+                    <p>Password</p>
+                    <input type="password" onChange={e => setPassword(e.target.value)} />
+                </label>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
         </div>
-
-    );
-
+    )
 }

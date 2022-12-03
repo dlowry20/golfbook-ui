@@ -9,14 +9,14 @@ function CurrentRound() {
 
     const [scores, setScores] = useState([]);
 
+    const token = localStorage.getItem("accessToken")
     useEffect(() => {
+        alert(token)
         axios.get("http://localhost:8080/hole_score/current_round", {}, {
-            auth: {
-                username: "user1",
-                password: "password"
+            headers: {
+                'Authorization': `Bearer ${token}`
             }
-        })
-            .then((response) => {
+        }).then((response) => {
                 setScores(response.data);
                 setError(null);
             })
