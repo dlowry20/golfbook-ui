@@ -14,6 +14,7 @@ import Leaderboard from "./Leaderboard";
 import ErrorPage from "./ErrorPage";
 import Login from "./containers/Login";
 
+
 const router = createBrowserRouter([
     {
         path: "/",

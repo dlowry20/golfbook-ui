@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Header from './components/Header';
 
 
 export default function StartRound() {
@@ -56,6 +57,8 @@ export default function StartRound() {
     }
 
     return (
+        <>
+        <Header />
         <form onSubmit={handleSubmit}>
             <label>Golf Course:
             <input
@@ -105,6 +108,7 @@ export default function StartRound() {
             </label>
             <input type="submit" />
         </form>
+        </>
     )
 }
 

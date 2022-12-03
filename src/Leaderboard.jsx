@@ -2,6 +2,7 @@
 import CurrentScore, {LeaderBoardRow} from "./CurrentScore";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Header from './components/Header';
 
 function Leaderboard() {
     const [error, setError] = useState(null);
@@ -25,6 +26,8 @@ function Leaderboard() {
     if (error) return <p>An error occurred</p>
 
     return (
+        <>
+        <Header/>
         <table>
             <thead>
             <tr>
@@ -45,6 +48,7 @@ function Leaderboard() {
             }
             </tbody>
         </table>
+        </>
     );
 }
 
