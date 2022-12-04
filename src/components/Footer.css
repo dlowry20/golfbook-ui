@@ -1,0 +1,18 @@
+.footer {
+    font-size: medium;
+    color: rgb(51, 50, 50);
+}
+
+.footerText {
+    text-align: center;
+}
+
+.footerPosition {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.copyRight {
+    font-size: 0.8em;
+}

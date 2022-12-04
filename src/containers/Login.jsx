@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import axios from 'axios';
-
+import Footer from '../components/Footer';
 
 async function loginUser(credentials) {
 
@@ -43,6 +43,7 @@ export default function Login() {
                     <button type="submit">Submit</button>
                 </div>
             </form>
+            <Footer/>
         </div>
     )
 }

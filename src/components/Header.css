@@ -12,13 +12,14 @@
     width: 50%;
     color: rgb(100, 136, 100);
     font-weight: 700;
-    font-size: x-large;
+    font-size: xx-large;
     padding-right: 65px;
     text-shadow: 1px 1px rgb(207, 202, 202);
 }
 
 .nav-link {
     padding: 0 15px;
+    font-size: large;
     color: rgb(61, 156, 61);
     text-shadow: 1px 1px rgb(134, 131, 131);
 }
@@ -26,8 +27,6 @@
 .nav-link:hover {
     padding: 0 15px;
     color: rgb(20, 216, 20);
-    text-shadow: 1.5px 1.5px rgb(134, 131, 131);
-    font-size: large;
-    font-weight: bold;
+    text-shadow: 4px -1px 20px rgb(142, 241, 142);
     transition: 0.5s;
 }
