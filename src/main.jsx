@@ -13,6 +13,7 @@ import AddHoleScore from "./AddHoleScore";
 import Leaderboard from "./Leaderboard";
 import ErrorPage from "./ErrorPage";
 import Login from "./containers/Login";
+import Courses from "./components/Courses";
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
     {
         path: "/addHoleScore",
         element: <AddHoleScore />,
+    },
+    {
+        path:"/courses",
+        element: <Courses/>
     },
 
 ]);

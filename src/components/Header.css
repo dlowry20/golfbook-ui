@@ -4,6 +4,7 @@
     justify-content: center;
     padding: 15px;
     background-color: rgb(231, 229, 229);
+    margin-bottom: 25px;
 }
 
 #logo{
@@ -13,7 +14,7 @@
     font-weight: 700;
     font-size: x-large;
     padding-right: 65px;
-    text-shadow: 1px 1px rgb(134, 131, 131);
+    text-shadow: 1px 1px rgb(207, 202, 202);
 }
 
 .nav-link {
@@ -26,6 +27,7 @@
     padding: 0 15px;
     color: rgb(20, 216, 20);
     text-shadow: 1.5px 1.5px rgb(134, 131, 131);
+    font-size: large;
+    font-weight: bold;
     transition: 0.5s;
-    font-size: 125%;
 }
