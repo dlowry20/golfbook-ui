@@ -13,6 +13,9 @@ export default function Header() {
             <Link to="/leaderboard"><p className="nav-link">Leaderboard</p></Link>
             <Link to="/courses"><p className="nav-link">Courses</p></Link>
             <Link to="/startRound"><p className="nav-link">Start Round</p></Link>
+            <Link to="/currentRound"><p className="nav-link">Current Round</p></Link>
+            <Link to="/addHoleScore"><p className="nav-link">Add Hole Score</p></Link>
+            <Link to="/courses/createCourse"><p className="nav-link">Create Course</p></Link>
           </div>
       </nav>
     </>

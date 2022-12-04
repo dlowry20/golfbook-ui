@@ -5,6 +5,7 @@ import Leaderboard from "./Leaderboard";
 import Login from "./containers/Login";
 import Courses from './components/Courses';
 import StartRound from './StartRound';
+import CreateCourse from './components/CreateCourse';
 function App() {
     return (
         <div className="wrapper">
@@ -14,7 +15,7 @@ function App() {
                     <Route path="/" exact>
                         <Login />
                     </Route>
-                    <Route path="/leaderboard">
+                    <Route path="leaderboard">
                         <Leaderboard/>
                     </Route>
                     <Route path="courses">
@@ -22,6 +23,12 @@ function App() {
                     </Route>
                     <Route path="startRound">
                         <StartRound/>
+                    </Route>
+                    <Route path="currentRound">
+                        <CurrentRound/>
+                    </Route>
+                    <Route path="createCourse">
+                        <CreateCourse/>
                     </Route>
                     {/*<Route path="/dashboard">*/}
                     {/*    element = {<CurrentRound />}*/}

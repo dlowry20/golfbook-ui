@@ -9,7 +9,7 @@ import "./index.css";
 import StartRound from "./StartRound"
 import CurrentRound from "./CurrentRound";
 import AddHoleScore from "./AddHoleScore";
-
+import CreateCourse from "./components/CreateCourse";
 import Leaderboard from "./Leaderboard";
 import ErrorPage from "./ErrorPage";
 import Login from "./containers/Login";
@@ -36,18 +36,27 @@ const router = createBrowserRouter([
     {
         path: "/startRound",
         element: <StartRound />,
+        errorElement: <ErrorPage />
     },
     {
         path: "/currentRound",
         element: <CurrentRound />,
+        errorElement: <ErrorPage />
     },
     {
         path: "/addHoleScore",
         element: <AddHoleScore />,
+        errorElement: <ErrorPage />
     },
     {
         path:"/courses",
-        element: <Courses/>
+        element: <Courses/>,
+        errorElement: <ErrorPage />
+    },
+    {
+        path:"/courses/createCourse",
+        element: <CreateCourse/>,
+        errorElement: <ErrorPage />
     },
     // {
     //     path:"/courses/id",

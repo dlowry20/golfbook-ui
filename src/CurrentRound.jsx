@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CurrentRoundHole from "./CurrentRoundHole"
 import { Outlet } from "react-router-dom"
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function CurrentRound() {
 
@@ -26,6 +28,7 @@ function CurrentRound() {
 
     return (
         <>
+        <Header/>
         <table>
             <thead>
             <tr>
@@ -55,6 +58,7 @@ function CurrentRound() {
             <div id="detail">
                 <Outlet />
             </div>
+            <Footer/>
         </>
     );
 
