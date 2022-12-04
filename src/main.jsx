@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
-  createBrowserRouter,
-  RouterProvider,
+    createBrowserRouter,
+    RouterProvider,
+    Navigate
 } from "react-router-dom";
 import "./index.css";
 
@@ -15,6 +16,8 @@ import ErrorPage from "./ErrorPage";
 import Login from "./containers/Login";
 import Courses from "./components/Courses";
 
+
+const loggedIn = localStorage.getItem("accessToken")
 
 const router = createBrowserRouter([
     {
