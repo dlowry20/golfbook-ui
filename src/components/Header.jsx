@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "./Header.css";
 
 
@@ -6,13 +7,13 @@ export default function Header() {
     return (
     <>
       <nav id="navbar-custom">
-        <div id="navbarNav">
-            <a id="logo" role="link" aria-disabled="true">Golfbook</a>
-            <a className="nav-link" href="/">Login</a>
-            <a className="nav-link" href="/leaderboard">Leaderboard</a>
-            <a className="nav-link" href="/courses">Courses</a>
-            <a className="nav-link" href="/startRound">Start Round</a>
-        </div>
+        <div className="navbar-Nav">
+            <p id="logo">Golfbook</p>
+            <Link to="/"><p className="nav-link">Login</p></Link>
+            <Link to="/leaderboard"><p className="nav-link">Leaderboard</p></Link>
+            <Link to="/courses"><p className="nav-link">Courses</p></Link>
+            <Link to="/startRound"><p className="nav-link">Start Round</p></Link>
+          </div>
       </nav>
     </>
     )

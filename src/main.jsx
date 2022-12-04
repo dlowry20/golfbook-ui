@@ -49,11 +49,6 @@ const router = createBrowserRouter([
         path:"/courses",
         element: <Courses/>
     },
-    // {
-    //     path:"/courses/id",
-    //     element: <Course/> //need to fix path to individual course
-    // },
-
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
