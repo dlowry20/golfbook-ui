@@ -45,6 +45,8 @@ function AddHoleScore() {
     }
 
     return (
+        <>
+        <Header />
         <form onSubmit={handleSubmit}>
             <label>Hole Number:
                 <input
@@ -96,6 +98,7 @@ function AddHoleScore() {
             </label>
             <input type="submit" />
         </form>
+        </>
     )
 }
 

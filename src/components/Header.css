@@ -1,24 +1,31 @@
 #navbar-custom {
-    display: inline;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 25px;
-    background-color: grey;
+    padding: 15px;
+    background-color: rgb(231, 229, 229);
 }
 
 #logo{
     margin: auto;
     width: 50%;
-    padding: 5px;
-    color: green;
-    font-weight: bolder;
+    color: rgb(100, 136, 100);
+    font-weight: 700;
     font-size: x-large;
+    padding-right: 65px;
+    text-shadow: 1px 1px rgb(134, 131, 131);
 }
 
-.navbar-nav {
-    padding-left: 0;
+.nav-link {
+    padding: 0 15px;
+    color: rgb(61, 156, 61);
+    text-shadow: 1px 1px rgb(134, 131, 131);
 }
 
-.nav-item {
-    display: inline;
+.nav-link:hover {
+    padding: 0 15px;
+    color: rgb(20, 216, 20);
+    text-shadow: 1.5px 1.5px rgb(134, 131, 131);
+    transition: 0.5s;
+    font-size: 125%;
 }
