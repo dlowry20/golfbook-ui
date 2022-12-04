@@ -1,7 +1,7 @@
 export function CourseRow({
     courseId = 5,
     courseName = "Saint Paul Country Club",
-    par = 72,
+    par = 72
 }) {
 return (
 <tr className="courses">

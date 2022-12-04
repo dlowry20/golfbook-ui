@@ -49,6 +49,10 @@ const router = createBrowserRouter([
         path:"/courses",
         element: <Courses/>
     },
+    {
+        path:"/courses/id",
+        element: <Courses/> //need to fix path to individual course
+    },
 
 ]);
 
