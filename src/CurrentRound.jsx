@@ -4,6 +4,7 @@ import CurrentRoundHole from "./CurrentRoundHole"
 import { Outlet } from "react-router-dom"
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import GamePlayNav from "./components/GamePlayNav";
 
 function CurrentRound() {
 
@@ -58,6 +59,7 @@ function CurrentRound() {
             <div id="detail">
                 <Outlet />
             </div>
+            <GamePlayNav/>
             <Footer/>
         </>
     );

@@ -1,0 +1,29 @@
+#gameNav {
+    border: 1px solid black;
+    width: 450px;
+    border-radius: 5%;
+}
+
+#gamePlay {
+    text-align: center;
+    color: red;
+}
+
+.gameNavBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-nav-link {
+    border: 1px solid red;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(241, 91, 91);
+    border-radius: 15%;
+}
+
+.game-nav-link:hover {
+    background-color: rgb(233, 51, 51);
+}

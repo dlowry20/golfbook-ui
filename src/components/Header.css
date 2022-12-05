@@ -12,11 +12,20 @@
 
 #logo{
     padding-right: 0;
-    color: rgb(100, 136, 100);
+    color: rgb(61, 156, 61);
     font-weight: 700;
     font-size: xx-large;
     text-shadow: 1px 1px rgb(207, 202, 202);
     margin: auto;
+}
+
+#golfbookHeaderLogo {
+    background-color: rgb(61, 156, 61);
+    padding: 3px;
+    border-radius: 20%;
+    color: #fff;
+    border-color: none;
+    text-shadow: none;
 }
 
 .nav-link {

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import GamePlayNav from './components/GamePlayNav';
 
 
 export default function StartRound() {
@@ -60,7 +61,7 @@ export default function StartRound() {
     return (
         <>
         <Header />
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="startRoundForm">
             <label>Golf Course:
             <input
                 type="text"
@@ -109,6 +110,7 @@ export default function StartRound() {
             </label>
             <input type="submit" />
         </form>
+        <GamePlayNav />
         <Footer/>
         </>
     )
