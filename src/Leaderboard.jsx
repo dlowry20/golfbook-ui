@@ -29,6 +29,7 @@ function Leaderboard() {
     return (
         <>
         <Header/>
+        <h1>Leaderboard</h1>
         <table>
             <thead>
             <tr>

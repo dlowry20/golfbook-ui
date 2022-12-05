@@ -1,17 +1,17 @@
-.courses h1 {
+h1 {
     padding: 0 15px;
     color: rgb(61, 156, 61);
-    text-shadow: 4px -1px 10px rgba(150, 150, 150, 1);
+    text-shadow: 4px -1px 10px rgb(211, 209, 209);
     text-align: center;
     font-size: 3rem;
 }
 
-.courses table, .courses th, .courses td {
+table, th, td {
     border: 1px solid;
     border-color: rgb(88, 86, 86);
   }
 
-  .courses table {
+table {
     margin-left: auto;
     margin-right: auto;
     width: 75%;
@@ -24,31 +24,31 @@
         margin-bottom: 15px;
   }
 
-  .courses th {
+thead {
     padding: 15px;
   }
 
-  #rowHeader {
+  th {
     padding: 15px;
     font-size: 1.5rem;
     background-color: rgb(55, 112, 55);
     margin: 25px;
   }
 
-  .courses tr {
+tr {
     color: rgb(230, 220, 220);
     text-align: center;
     font-size: 1.5rem;
   }
 
-  .courses tr:nth-child(even) {
+tr:nth-child(even) {
     background-color: rgb(69, 201, 16);
 }
 
-.courses tr:nth-child(odd) {
+tr:nth-child(odd) {
     background-color: rgb(103, 160, 83);
 }
 
-.courses td {
+td {
     padding: 10px;
 }

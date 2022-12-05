@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Header from './Header';
 import Footer from './Footer';
@@ -42,7 +43,7 @@ function CreateCourse(){
         <>
             <Header/>
             <div id="createCourse">
-            <form onSubmit={handleClick} action="/courses" id="createCourseForm">
+            <form onSubmit={handleClick} id="createCourseForm">
                 <h1 className="createCourseTitle">Create New Course</h1>
                 <label for="courseName" id="courseNameLabel">Course Name:</label>
                 <input 
@@ -62,7 +63,9 @@ function CreateCourse(){
                     onChange={(event)=> setPar(event.target.value)} 
                 />
                 <br/>
-                <button type="submit" id="createCourseBtn">Create Course</button>
+                <button type="submit" 
+                        id="createCourseBtn"
+                        >Create Course</button>
             </form>
             </div>
             <Footer/>

@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
 import CurrentRound from "./CurrentRound";
 import Leaderboard from "./Leaderboard";
 import Login from "./containers/Login";
 import Courses from './components/Courses';
 import StartRound from './StartRound';
 import CreateCourse from './components/CreateCourse';
+
 function App() {
     return (
         <div className="wrapper">
@@ -30,12 +30,9 @@ function App() {
                     <Route path="createCourse">
                         <CreateCourse/>
                     </Route>
-                    {/*<Route path="/dashboard">*/}
-                    {/*    element = {<CurrentRound />}*/}
-                    {/*</Route>*/}
-                    {/*<Route path="/preferences">*/}
-                    {/*    element = {<Leaderboard />}*/}
-                    {/*</Route>*/}
+                    {/* <Route path="courses/:courseId">
+                        <Holes />
+                    </Route> */}
                 </Routes>
             </BrowserRouter>
         </div>

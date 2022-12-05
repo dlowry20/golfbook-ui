@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import axios from 'axios';
 import Footer from '../components/Footer';
+import './Login.css';
 
 async function loginUser(credentials) {
 
@@ -29,18 +30,19 @@ export default function Login() {
 
     return(
         <div className="login-wrapper">
-            <h1>Please Log In</h1>
-            <form onSubmit={handleSubmit}>
+            <h1>Welcome to <span id="golfbookLogo">G</span>olfbook</h1>
+            <h3 className="loginStartText">Please Log In to get Started</h3>
+            <form className="loginForm" onSubmit={handleSubmit}>
                 <label>
-                    <p>Username</p>
+                    <p id="userName">Username</p>
                     <input type="text" onChange={e => setUserName(e.target.value)} />
                 </label>
                 <label>
-                    <p>Password</p>
+                    <p id="passWord">Password</p>
                     <input type="password" onChange={e => setPassword(e.target.value)} />
                 </label>
                 <div>
-                    <button type="submit">Submit</button>
+                    <button className="loginBtn" type="submit">Submit</button>
                 </div>
             </form>
             <Footer/>

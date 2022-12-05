@@ -1,0 +1,30 @@
+.loginStartText {
+    padding: 35px 35px;
+    color: rgb(61, 156, 61);
+    text-shadow: 4px -1px 10px rgb(231, 229, 229);
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 35px;
+}
+
+.loginForm {
+    text-align: center;
+}
+
+.loginBtn {
+    margin-top: 35px;
+}
+
+#golfbookLogo {
+    background-color: rgb(61, 156, 61);
+    padding: 3px;
+    border-radius: 20%;
+    color: #fff;
+    border-color: none;
+    text-shadow: none;
+}
+
+#userName, #passWord {
+    color: rgb(61, 156, 61);
+    font-size: large;
+}

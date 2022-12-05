@@ -37,6 +37,7 @@ function Courses() {
                 <th>Course Id</th>
                 <th>Course Name</th>
                 <th>Par</th>
+                <th>Holes</th>
             </tr>
             </thead>
             <tbody>
