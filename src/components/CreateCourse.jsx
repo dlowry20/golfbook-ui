@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from './Header';
 import Footer from './Footer';
+import './CreateCourse.css';
 
 function CreateCourse(){
     const [courses, setCourses] = useState([]);
@@ -40,25 +41,30 @@ function CreateCourse(){
     return (
         <>
             <Header/>
-            <form onSubmit={handleClick} action="/courses">
-                <label for="courseName">Course Name:
+            <div id="createCourse">
+            <form onSubmit={handleClick} action="/courses" id="createCourseForm">
+                <h1 className="createCourseTitle">Create New Course</h1>
+                <label for="courseName" id="courseNameLabel">Course Name:</label>
                 <input 
                     name="courseName"
+                    id="courseNameInput"
                     type="text" 
                     value={courseName}
                     onChange={(event)=> setCourseName(event.target.value)} 
                 />
-                </label>
-                <label for="par">Par:
+                <br/>
+                <label for="par" id="parLabel">Par:</label>
                 <input 
                     name="par"
+                    id="parInput"
                     type="number" 
                     value={par}
                     onChange={(event)=> setPar(event.target.value)} 
                 />
-                </label>
-                <input type="submit" />
+                <br/>
+                <button type="submit" id="createCourseBtn">Create Course</button>
             </form>
+            </div>
             <Footer/>
         </>
     )
