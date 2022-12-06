@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Footer from '../components/Footer';
 import './Login.css';
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 async function loginUser(credentials) {
 
@@ -44,7 +44,7 @@ export default function Login() {
                     <input type="password" onChange={e => setPassword(e.target.value)} />
                 </label>
                 <div>
-                    <button className="loginBtn" type="submit">Submit</button>
+                    <button className="loginBtn" type="submit"><Link to={"/leaderboard"}>Submit</Link></button>
                 </div>
             </form>
             <Footer/>

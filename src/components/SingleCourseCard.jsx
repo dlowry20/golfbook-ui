@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import SingleCourseDisplay from './SingleCourseDisplay';
 import { useParams } from 'react-router-dom';
 
-function HolesByCourse() {
+function SingleCourseCard() {
     const [error, setError] = useState(null);
     const [courses, setCourses] = useState([]);
     const {courseId} = useParams();
@@ -22,21 +23,10 @@ function HolesByCourse() {
     }, [])
 
     if (error) return <p>An error occurred</p>
-
   return (
     <>
-            {
-                courses.filter((courses) => courses.courseId === courseId)
-                    .map((courseId, courseName, coursePar) => (
-                        <div key={courseId}>
-                            <h1>{courseName}</h1>
-                            <h3>{coursePar}</h3>
-                        </div>
-                    ))
-            }
-        </>
+    {/* <SingleCourseDisplay ({courses}, courseId) /> */}
+    </>
   )
 }
-
-export default HolesByCourse;
-
+export default SingleCourseCard;

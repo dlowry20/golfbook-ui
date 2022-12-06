@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from './Header';
 import Footer from './Footer';
@@ -117,7 +118,7 @@ export default function StartRound() {
                 <br/>
                 <button type="submit"
                 id="startRoundBtn">
-                    Start Round
+                    <Link to={"/addHoleScore"}>Start Round</Link>
                 </button>
             </form>
         </div>

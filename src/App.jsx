@@ -6,6 +6,7 @@ import Courses from './components/Courses';
 import StartRound from './components/StartRound';
 import CreateCourse from './components/CreateCourse';
 import HolesByCourse from './components/HolesByCourse';
+import { SingleCourseCard } from './components/SingleCourseCard';
 
 function App() {
     return (
@@ -19,8 +20,11 @@ function App() {
                     <Route path="leaderboard">
                         <Leaderboard/>
                     </Route>
-                    <Route path="courses">
+                    <Route exact path="courses">
                         <Courses/>
+                    </Route>
+                    <Route exact path="/courses/:courseId">
+                        <SingleCourseCard />
                     </Route>
                     <Route path="startRound">
                         <StartRound/>
@@ -30,9 +34,6 @@ function App() {
                     </Route>
                     <Route path="createCourse">
                         <CreateCourse/>
-                    </Route>
-                    <Route path="courses/:courseId">
-                        <HolesByCourse />
                     </Route>
                 </Routes>
             </BrowserRouter>

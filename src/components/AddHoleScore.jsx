@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; 
 import axios from 'axios';
 import Header from './Header';
 import Footer from './Footer';
@@ -114,7 +115,7 @@ function AddHoleScore() {
             <br/>
             <button type="submit"
                     id="addHoleScoreBtn">
-                Add Score
+                <Link to={"/currentRound"}>Add Score</Link>
             </button>
         </form>
         </div>

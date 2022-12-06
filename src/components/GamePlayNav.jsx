@@ -7,6 +7,7 @@ import "./GamePlayNav.css";
 export default function Header() {
     return (
     <>
+    <div id="gameNavContainer">
       <nav id="gameNav">
         <p id="gamePlay">Game Play Navigation</p>
         <div className="gameNavBar">
@@ -15,6 +16,7 @@ export default function Header() {
             <Link to="/addHoleScore"><p className="game-nav-link">Add Hole Score</p></Link>
           </div>
       </nav>
+      </div>
     </>
     )
 }
