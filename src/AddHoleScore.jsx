@@ -16,7 +16,7 @@ function AddHoleScore() {
     const [fairway, setFairway] = useState(false);
     const token = localStorage.getItem("accessToken")
     useEffect(() => {
-        axios.get("http://localhost:8080/hole_score/current_round", {}, {
+        axios.get("http://localhost:8080/hole_score/current_round", {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

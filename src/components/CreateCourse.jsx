@@ -15,7 +15,7 @@ function CreateCourse(){
 
     const token = localStorage.getItem("accessToken");
     useEffect(() => {
-        axios.get("http://localhost:8080/courses/createCourse", {}, {
+        axios.get("http://localhost:8080/courses/createCourse", {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

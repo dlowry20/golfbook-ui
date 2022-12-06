@@ -13,7 +13,7 @@ function CreateHole() {
 
     const token = localStorage.getItem("accessToken");
     useEffect(() => {
-        axios.get("http://localhost:8080/holes/", {}, {
+        axios.get("http://localhost:8080/holes/", {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

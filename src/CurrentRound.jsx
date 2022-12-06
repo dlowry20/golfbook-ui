@@ -14,8 +14,7 @@ function CurrentRound() {
 
     const token = localStorage.getItem("accessToken")
     useEffect(() => {
-        alert(token)
-        axios.get("http://localhost:8080/hole_score/current_round", {}, {
+        axios.get("http://localhost:8080/hole_score/current_round",  {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
