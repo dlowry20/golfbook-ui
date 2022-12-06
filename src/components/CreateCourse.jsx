@@ -65,7 +65,7 @@ function CreateCourse(){
                 <br/>
                 <button type="submit" 
                         id="createCourseBtn"
-                        ><Link to={"/courses"}>Create Course</Link></button>
+                        >Create Course</button>
             </form>
             </div>
             <Footer/>

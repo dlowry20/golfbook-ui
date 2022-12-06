@@ -115,7 +115,7 @@ function AddHoleScore() {
             <br/>
             <button type="submit"
                     id="addHoleScoreBtn">
-                <Link to={"/currentRound"}>Add Score</Link>
+                Add Score
             </button>
         </form>
         </div>

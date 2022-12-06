@@ -23,7 +23,7 @@ function App() {
                     <Route exact path="courses">
                         <Courses/>
                     </Route>
-                    <Route exact path="/courses/:courseId">
+                    <Route path="/courses/:courseId">
                         <SingleCourseCard />
                     </Route>
                     <Route path="startRound">
@@ -32,7 +32,7 @@ function App() {
                     <Route path="currentRound">
                         <CurrentRound/>
                     </Route>
-                    <Route path="createCourse">
+                    <Route exact path="createCourse">
                         <CreateCourse/>
                     </Route>
                 </Routes>

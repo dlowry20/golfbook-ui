@@ -118,7 +118,7 @@ export default function StartRound() {
                 <br/>
                 <button type="submit"
                 id="startRoundBtn">
-                    <Link to={"/addHoleScore"}>Start Round</Link>
+                    Start Round
                 </button>
             </form>
         </div>
