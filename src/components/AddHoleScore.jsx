@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import GamePlayNav from "./components/GamePlayNav";
-
+import Header from './Header';
+import Footer from './Footer';
+import GamePlayNav from "./GamePlayNav";
+import './AddHoleScore.css';
 function AddHoleScore() {
 
     const [scores, setScores] = useState([]);
@@ -50,16 +50,20 @@ function AddHoleScore() {
     return (
         <>
         <Header />
-        <form onSubmit={handleSubmit}>
-            <label>Hole Number:
+        <div id="addHoleScore">
+        <form onSubmit={handleSubmit} className="addHoleScoreForm">
+            <h1 className="addHoleScoreTitle">Add Score</h1>
+            <label id="holeNumberLabel">Hole Number:
                 <input
                     name="holeNumber"
+                    id="holeNumberInput"
                     type="number"
                     value={holeNumber}
                     onChange={(event) => setHoleNumber(event.target.value)}
                 />
             </label>
-            <label>Par:
+            <br/>
+            <label id="roundDateLabel">Par:
                 <input
                     name="par"
                     type="number"
@@ -67,40 +71,53 @@ function AddHoleScore() {
                     onChange={(event) => setPar(event.target.value)}
                 />
             </label>
-            <label>Score:
+            <br/>
+            <label id="holeScoreLabel">Score:
                 <input
                     name="score"
+                    id="holeScoreInput"
                     type="number"
                     value={score}
                     onChange={(event) => setScore(event.target.value)}
                 />
             </label>
-            <label>Putts:
+            <br/>
+            <label id="holePuttsLabel">Putts:
                 <input
+                    id="holePuttsInput"
                     type="number"
                     name="putts"
                     value={putts}
                     onChange={(event) => setPutts(event.target.value)}
                 />
             </label>
-            <label>GIR:
+            <br/>
+            <label id="holeGirLabel">GIR:
                 <input
+                    id="holeGirInput"
                     type="checkbox"
                     name="gir"
-                    checked={gir}
+                    value={gir}
                     onChange={(event) => setGir(event.target.value)}
                 />
             </label>
-            <label>Fairway
+            <br/>
+            <label id="holeFairwayLabel">Fairway
                 <input
+                    id="holeFairwayInput"
                     type="checkbox"
                     name="fairway"
                     value={fairway}
                     onChange={(event) => setFairway(event.target.value)}
                 />
             </label>
-            <input type="submit" />
+            <br/>
+            <button type="submit"
+                    id="addHoleScoreBtn">
+                Add Score
+            </button>
         </form>
+        </div>
         <GamePlayNav/>
         <Footer/>
         </>

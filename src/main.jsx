@@ -7,9 +7,9 @@ import {
 } from "react-router-dom";
 import "./index.css";
 
-import StartRound from "./StartRound"
+import StartRound from "./components/StartRound"
 import CurrentRound from "./CurrentRound";
-import AddHoleScore from "./AddHoleScore";
+import AddHoleScore from "./components/AddHoleScore";
 import CreateCourse from "./components/CreateCourse";
 import Leaderboard from "./Leaderboard";
 import ErrorPage from "./ErrorPage";

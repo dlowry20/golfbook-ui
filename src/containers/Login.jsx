@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Footer from '../components/Footer';
 import './Login.css';
+import { useNavigate } from "react-router-dom";
 
 async function loginUser(credentials) {
 
@@ -26,6 +27,7 @@ export default function Login() {
             password
         });
         localStorage.setItem("accessToken", tokenResponse.token)
+
     }
 
     return(
