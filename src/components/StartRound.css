@@ -1,0 +1,81 @@
+.startRoundTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0;
+    color: rgb(100, 136, 100);
+    font-weight: 700;
+    font-size: xx-large;
+    text-shadow: 1px 1px rgb(207, 202, 202);
+}
+
+
+#startRound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 55px;
+}
+
+#startRoundForm {
+    border: solid black 2px;
+    padding: 65px;
+    border-radius: 20%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#startRoundLabel, #roundDateLabel, #tournamentIdLabel {
+    padding: 25px;
+    color: rgb(100, 136, 100);
+    font-weight: 700;
+    font-size: large;
+    text-shadow: 1px 1px rgb(207, 202, 202);
+}
+
+#startRoundBtn, #startRoundReset {
+    margin-top: 55px;
+    background-color: rgb(100, 136, 100);
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, .15) 0 1px 2px,
+    rgba(44, 187, 99, .15) 0 2px 4px,
+    rgba(44, 187, 99, .15) 0 4px 8px,
+    rgba(44, 187, 99, 0.15) 0 8px 16px,
+    rgba(44, 187, 99, .15) 0 16px 32px;
+    color: #fff;
+    display: inline-block;
+    padding: 7px 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 125px;
+}
+
+#startRoundBtn:hover {
+    background-color: rgb(20, 216, 20);
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,
+    rgba(44,187,99,.25) 0 1px 2px,
+    rgba(44,187,99,.25) 0 2px 4px,
+    rgba(44,187,99,.25) 0 4px 8px,
+    rgba(44,187,99,.25) 0 8px 16px,
+    rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+}
+
+#courseNameInput, #roundDateInput, #tournamentIdInput {
+    width: 200px;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+
+#parInput {
+    width: 35px;
+}

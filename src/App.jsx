@@ -3,7 +3,7 @@ import CurrentRound from "./CurrentRound";
 import Leaderboard from "./Leaderboard";
 import Login from "./containers/Login";
 import Courses from './components/Courses';
-import StartRound from './StartRound';
+import StartRound from './components/StartRound';
 import CreateCourse from './components/CreateCourse';
 
 function App() {

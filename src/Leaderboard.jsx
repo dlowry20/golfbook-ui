@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import GamePlayNav from "./components/GamePlayNav";
 
 function Leaderboard() {
     const [error, setError] = useState(null);
@@ -50,6 +51,7 @@ function Leaderboard() {
             }
             </tbody>
         </table>
+        <GamePlayNav/>
         <Footer />
         </>
     );
