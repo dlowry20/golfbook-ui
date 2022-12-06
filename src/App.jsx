@@ -5,6 +5,7 @@ import Login from "./containers/Login";
 import Courses from './components/Courses';
 import StartRound from './StartRound';
 import CreateCourse from './components/CreateCourse';
+import HolesByCourse from './components/HolesByCourse';
 
 function App() {
     return (
@@ -30,9 +31,9 @@ function App() {
                     <Route path="createCourse">
                         <CreateCourse/>
                     </Route>
-                    {/* <Route path="courses/:courseId">
-                        <Holes />
-                    </Route> */}
+                    <Route path="courses/:courseId">
+                        <HolesByCourse />
+                    </Route>
                 </Routes>
             </BrowserRouter>
         </div>
